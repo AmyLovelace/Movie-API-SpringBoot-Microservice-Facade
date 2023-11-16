@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @Slf4j
 public class MovieController {
@@ -28,6 +30,13 @@ public class MovieController {
         log.info("successfully added a new movie");
         String result = service.addMovie(movie);
         return ResponseEntity.ok(result);
+    }
+
+    @PostMapping(value="/addMovies")
+    public String addMovies(@RequestBody List<Movies> movies){
+        log.info("successfully added a new movies");
+        String result = service.addMovies(movies);
+        return "added movies: "+ result;
     }
 
 

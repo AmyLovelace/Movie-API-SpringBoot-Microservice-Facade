@@ -1,5 +1,6 @@
 package com.amylovelave.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
@@ -19,15 +20,20 @@ public class Movies {
 
     @Id
     @Column
+    @JsonProperty("id")
     int id;
 
     @Column
+    @JsonProperty("title")
+
     String name;
 
     @Column
+    @JsonProperty("director")
     String Director;
 
     @Column
+    @JsonProperty("rating")
     int rating;
 
 

@@ -27,6 +27,8 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	runtimeOnly 'mysql:mysql-connector-java:8.0.21'
+
 }
 
 tasks.named('bootBuildImage') {

@@ -33,7 +33,7 @@ public class MovieService {
 
     public String addMovies(List<Movies> movies) {
         dao.saveAll(movies);
-        return "All Movies has been added to Database";
+        return "All Movies has been added to Database" ;
     }
 
 
