@@ -46,7 +46,7 @@ public class MovieService {
 
 	public String updateStudent(Movies movie) {
 		dao.save(movie);
-		return "Roll Number is update :"+ movie.getId();
+		return "movie id is updated :"+ movie.getId();
 	}
 
 
