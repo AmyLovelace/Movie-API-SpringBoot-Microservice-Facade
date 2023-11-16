@@ -19,6 +19,7 @@ public class MovieController {
 
     @GetMapping(value="/search/{id}")
     public Movies search(@PathVariable int id) {
+        log.info("successfully added a new movie with ID:",id);
         return service.getMovie(id);
     }
 
