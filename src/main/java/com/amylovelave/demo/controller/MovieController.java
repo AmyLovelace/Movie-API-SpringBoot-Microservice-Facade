@@ -39,5 +39,22 @@ public class MovieController {
         return "added movies: "+ result;
     }
 
+    @DeleteMapping(value="/deleteMovies/{id}")
+    public String deleteMovies(@PathVariable int id){
+        log.info("successfully deleted a movie");
+        String result = service.deleteMovie(id);
+        return "deleted movies: "+ result;
+
+    }
+
+
+
+
+   /* public String deleteMovie(int id) {
+        Movies movie = dao.getById(id);
+        dao.delete(movie);
+        return "Id Number is deleted :"+id;
+    }*/
+
 
     }
