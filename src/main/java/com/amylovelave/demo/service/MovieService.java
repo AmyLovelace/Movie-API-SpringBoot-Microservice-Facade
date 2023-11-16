@@ -31,29 +31,24 @@ public class MovieService {
 
 
 
-    public String addMovies(List<Student> students) {
-        dao.saveAll(students);
-        return "All Student has been added to Database";
+    public String addMovies(List<Movies> movies) {
+        dao.saveAll(movies);
+        return "All Movies has been added to Database";
     }
 
 
 
-    /*
+    public String deleteMovie(int id) {
+        Movies movie = dao.getById(id);
+        dao.delete(movie);
+        return "Id Number is deleted :"+id;
+    }
 
-
-
-
-	public String deleteStudent(int roll) {
-		Student student = dao.getById(roll);
-		dao.delete(student);
-		return "Roll Number is deleted :"+roll;
-	}
-
-	public String updateStudent(Student student) {
-		dao.save(student);
-		return "Roll Number is update :"+student.getRoll();
+	public String updateStudent(Movies movie) {
+		dao.save(movie);
+		return "Roll Number is update :"+ movie.getId();
 	}
 
 
-}*/
+
 }
