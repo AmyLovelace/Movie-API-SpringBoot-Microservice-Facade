@@ -48,13 +48,4 @@ public class MovieController {
     }
 
 
-
-
-   /* public String deleteMovie(int id) {
-        Movies movie = dao.getById(id);
-        dao.delete(movie);
-        return "Id Number is deleted :"+id;
-    }*/
-
-
     }
